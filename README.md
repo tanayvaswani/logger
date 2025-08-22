@@ -14,7 +14,12 @@ logger.warn("warning message")
 
 ## Basic Requirements
 
-..
+1. Different Log Levels.
+2. Logs with a timestamp, log level, and message content.
+3. Support multiple output destinations.
+4. Configuration mechanism to set the log level and output destination.
+5. Thread safe to handle concurrent logging from multiple threads.
+6. Extensible to accommodate new log levels and output destinations in the future.
 
 ### Functional Requirements
 
