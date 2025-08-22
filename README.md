@@ -23,11 +23,20 @@ logger.warn("warning message")
 
 ### Functional Requirements
 
-...
+1. Support for multiple log levels (e.g., DEBUG, INFO, WARNING, ERROR, CRITICAL).
+2. Each log entry must include a timestamp, log level, and message content.
+3. Ability to log messages to multiple output destinations (e.g., console, file).
+4. Provide a configuration mechanism to set log level and output destinations at runtime.
+5. Ensure thread safety for concurrent logging from multiple threads.
+6. Allow easy extension to add new log levels and output destinations.
 
 ### Non Functional Requirements
 
-...
+1. Logging operations should have minimal performance overhead.
+2. The framework should be easy to configure and integrate into existing Python applications.
+3. Log output should be human-readable and, optionally, machine-parseable (e.g., JSON).
+4. The framework should be robust and not lose log messages under high load or in case of errors.
+5. Extensibility: Developers should be able to add custom log levels and output handlers with minimal effort.
 
 ## Core Entities
 
