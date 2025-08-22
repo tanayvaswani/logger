@@ -6,7 +6,11 @@ Frameworks like **Log4j**, **SLF4J**, and **java.util.logging** power millions o
 
 ## Demo
 
-...
+```python
+logger.info("info message")
+logger.debug("debug message")
+logger.warn("warning message")
+```
 
 ## Basic Requirements
 
