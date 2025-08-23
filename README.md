@@ -47,7 +47,10 @@ Core Entities:
 ### LogLevel
 
 - Enum representing the supported log levels (e.g., DEBUG, INFO, WARNING, ERROR, CRITICAL).
-- Responsibility: Defines the severity of log messages and enables filtering based on level.
+
+**Responsibility**:
+
+- Defines the severity of log messages and enables filtering based on level.
 
 ### LogMessage
 
