@@ -60,6 +60,14 @@ Core Entities:
 - `level: LogLevel` — severity of the log
 - `message: str` — the log content
 
+**Methods**:
+
+- `get_timestamp(): datetime`
+- `get_level(): LogLevel`
+- `get_logger(): str`
+- `get_message(): str`
+- `get_thread_name(): str`
+
 **Responsibility**:
 
 - Encapsulates all information for a single log entry.
