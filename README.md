@@ -40,4 +40,66 @@ logger.warn("warning message")
 
 ## Core Entities
 
-...
+A logging framework is built around the right abstractions to provide flexible, extensible, and performant logging.
+
+Core Entities:
+
+### LogLevel
+
+- Enum representing the supported log levels (e.g., DEBUG, INFO, WARNING, ERROR, CRITICAL).
+- Responsibility: Defines the severity of log messages and enables filtering based on level.
+
+### LogMessage
+
+**Attributes**:
+
+- `timestamp: datetime` — when the log was created
+- `level: LogLevel` — severity of the log
+- `message: str` — the log content
+
+**Responsibility**:
+
+- Encapsulates all information for a single log entry.
+
+### LogAppender (Interface)
+
+**Methods**:
+
+- `append(LogMessage message): void` — handles outputting a log message to a destination
+
+**Responsibility**:
+
+- Abstracts the destination for log messages (console, file, etc.).
+
+### ConsoleAppender, FileAppender, DatabaseAppender
+
+- Concrete implementations of LogAppender.
+
+**Responsibility**:
+
+- Output log messages to the console, a file, or a database, respectively.
+
+### LoggerConfig
+
+**Attributes**:
+
+- `level: LogLevel` — minimum log level to output
+- `appenders: List[LogAppender]` — destinations for log messages
+
+**Responsibility**:
+
+- Holds configuration for the logger, such as log level and output destinations.
+
+### Logger
+
+Singleton class providing the main logging API.
+
+**Methods**:
+
+- `set_config(LoggerConfig config): void` — updates logger settings
+- `log(level, message): void` — logs a message at a given level
+- `info/debug/warning/error/critical(message): void` — convenience methods for each log level
+
+**Responsibility**:
+
+- Manages logging logic, applies configuration, and routes messages to appenders.
