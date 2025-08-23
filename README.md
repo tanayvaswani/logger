@@ -72,6 +72,28 @@ Core Entities:
 
 - Encapsulates all information for a single log entry.
 
+### LogFormatter (Interface)
+
+**Methods**:
+
+- `format(LogMessage message): str` — formats a log message as a string
+
+**Responsibility**:
+
+- Defines the contract for formatting log messages into a desired output format (e.g., plain text, JSON).
+
+### TextFormatter
+
+- Concrete implementation of `LogFormatter`.
+
+**Methods**:
+
+- `format(LogMessage message): str` — returns a human-readable string representation of the log message, typically including timestamp, thread name, log level, logger name, and message.
+
+**Responsibility**:
+
+- Provides a simple, human-readable formatting of log messages for output.
+
 ### LogAppender (Interface)
 
 **Methods**:
@@ -84,7 +106,7 @@ Core Entities:
 
 ### ConsoleAppender, FileAppender, DatabaseAppender
 
-- Concrete implementations of LogAppender.
+- Concrete implementations of `LogAppender`.
 
 **Responsibility**:
 
